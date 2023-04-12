@@ -1,13 +1,14 @@
 #include <iostream>
 #include <limits>
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
-float sum(int);
+int sum(int);
 
 int main()
 {
-    cout << "Problem 005 - To Vinh Tien - 22521474" << endl;
+    cout << "Problem 011 - To Vinh Tien - 22521474" << endl;
     int n;
     cout << "\nEnter the value of n:        ";
     cin >> n;
@@ -17,13 +18,13 @@ int main()
         cout << "\nEnter the value of n:        ";
         cin >> n;
     }
-    cout << "\nThe result of S(" << n << ") is:     " << setw(5) << setprecision(5) << sum(n) << "." << endl;
+    cout << "\nThe result of S(" << n << ") is:      " << sum(n) << "." << endl;
     return 0;
 }
 
-float sum(int n)
+int sum(int n)
 {
     if (n == 0)
         return 0;
-    return (sum(n - 1) + (float)1 / (n * (n + 1)));
+    return (sum(n - 1) + pow(n,4));
 }
