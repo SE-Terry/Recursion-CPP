@@ -29,5 +29,5 @@ float sum(int n)
         return 1;
     float a = sum(n - 1);
     float b = sum(n - 2);
-    return (a + (float)1 /(n + 1) / (a - b));
+    return (a + (float)1 /(n + 1 / (a - b)));
 }
