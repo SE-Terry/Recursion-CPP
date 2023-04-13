@@ -15,11 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream:Bai003-Quang/Bai003-Quang.vcxproj.filters
-    <ClCompile Include="Bai003.cpp">
-=======
-    <ClCompile Include="Bai022.cpp">
->>>>>>> Stashed changes:Bai022-Bao/Bai022-Bao.vcxproj.filters
+    <ClCompile Include="Bai034.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

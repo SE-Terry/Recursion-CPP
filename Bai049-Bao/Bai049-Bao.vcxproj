@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3ae036d1-54df-4c6d-9282-792d241b912a}</ProjectGuid>
-    <RootNamespace>Bai003Quang</RootNamespace>
+    <ProjectGuid>{26811726-a38b-4cd3-91cb-aecda4e9760b}</ProjectGuid>
+    <RootNamespace>Bai049Bao</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< Updated upstream:Bai003-Quang/Bai003-Quang.vcxproj
-    <ClCompile Include="Bai003.cpp" />
-=======
-    <ClCompile Include="Bai022.cpp" />
->>>>>>> Stashed changes:Bai022-Bao/Bai022-Bao.vcxproj
+    <ClCompile Include="Bai049.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
