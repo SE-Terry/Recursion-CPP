@@ -17,5 +17,5 @@ float Tich(int n) {
 	if (n == 0) {
 		return 1;
 	}
-	return Tich(n - 1) * (1 + (float)1/n/n);
+	return Tich(n - 1) * (1 + (float)1 / n / n);
 }
