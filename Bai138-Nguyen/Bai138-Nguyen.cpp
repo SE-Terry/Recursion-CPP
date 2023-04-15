@@ -4,10 +4,11 @@
 using namespace std;
 
 int TimUCLN(int[], int);
+int ucln(int a, int b);
 
 int main()
 {
-    int a[] = { 8,-8,9,6,-5,7,9,0 };
+    int a[] = { 8,8,9,6,5,7,9};
     cout << TimUCLN(a, 8);
     return 0;
 }
@@ -21,15 +22,7 @@ int TimUCLN(int a[], int n) {
     return lc;
 }
 
-int ucln(int a, int b)
-{
-    while (a != b)
-    {
-        if (a > b)
-            a = a - b;
-        else
-            b = b - a;
-    }
-
-    return a;
+int ucln(int a, int b) {
+    if (b == 0) return a;
+    return ucln(b, a % b);
 }
