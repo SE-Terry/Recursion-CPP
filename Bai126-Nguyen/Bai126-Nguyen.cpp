@@ -14,13 +14,13 @@ int main()
 
 int Tim_doan(int a[], int n) {
 	if (n == 1) {
-		if (a[0]%2==0) {
+		if (a[0] % 2 == 0) {
 			return 0;
 		}
 		return -1;
 	}
 	int lc = Tim_doan(a, n - 1);
-	if (lc == -1 && a[n-1]%2==0) {
+	if (lc == -1 && a[n - 1] % 2 == 0) {
 		return n - 1;
 	}
 	return lc;

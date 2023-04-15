@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ce0c795d-8786-4f33-8bfc-bf294188c856}</ProjectGuid>
-    <RootNamespace>Bai120</RootNamespace>
+    <ProjectGuid>{86e8dc96-4cdb-4914-9fd7-419421734208}</ProjectGuid>
+    <RootNamespace>Bai138Nguyen</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bai120.cpp" />
+    <ClCompile Include="Bai138-Nguyen.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

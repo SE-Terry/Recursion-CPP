@@ -13,11 +13,11 @@ int main()
 }
 
 void Liet_ke(int a[], int n) {
-	if (n<=1) {
+	if (n <= 1) {
 		return;
 	}
 	Liet_ke(a, n - 1);
-	if (abs(a[n-2])>abs(a[n-1])) {
+	if (abs(a[n - 2]) > abs(a[n - 1])) {
 		cout << a[n - 2] << setw(5);
 	}
 }
