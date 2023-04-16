@@ -53,7 +53,10 @@ int main()
 	int b[100];
 	int k;
 	Nhap(b, k);
+	cout << "Mang ban dau la: ";
+	Xuat(b, k);
 	HoanThienGiam(b, k);
+	cout << "\nMang hoan thien giam: ";
 	Xuat(b, k);
 	return 1;
 }

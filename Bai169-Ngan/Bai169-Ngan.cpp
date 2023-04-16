@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 using namespace std;
 
@@ -47,7 +47,10 @@ int main() {
 	cin >> n;
 	int* a = new int[n];
 	nhapMang(a, n);
+	cout << "Mang con la: ";
+	cout << endl;
 	LietKe(a, n);
+
 	delete[] a;
 	return 0;
 }

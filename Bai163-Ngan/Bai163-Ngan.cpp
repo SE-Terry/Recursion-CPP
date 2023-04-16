@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void ThemViTri(int[], int&,int, int);
+void ThemViTri(int[], int&, int, int);
 void Nhap(int[], int&);
 void Xuat(int[], int);
 
@@ -15,8 +15,8 @@ void ThemViTri(int a[], int& n, int x, int vt)
 		n++;
 		return;
 	}
-		swap(a[vt], x);
-		ThemViTri(a, n, x, vt + 1);
+	swap(a[vt], x);
+	ThemViTri(a, n, x, vt + 1);
 
 }
 
@@ -51,7 +51,7 @@ int main()
 	cin >> y;
 	cout << "Nhap vi tri: ";
 	cin >> VT;
-	ThemViTri(b, k,y,VT);
+	ThemViTri(b, k, y, VT);
 	cout << "Mang sau khi them: ";
 	Xuat(b, k);
 	return 1;
