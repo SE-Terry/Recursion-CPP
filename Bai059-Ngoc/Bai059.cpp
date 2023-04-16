@@ -9,7 +9,7 @@ int main()
 	int n;
 	cin >> n;
 	float kq = sum(x, n);
-	cout << "tong day tu 1 den x^n la :" << kq;
+	cout << "tong day tu 1 den (x^(2n+1)/(2*n+1)!) la :" << kq;
 	return 0;
 }
 float sum(float x, int n)
