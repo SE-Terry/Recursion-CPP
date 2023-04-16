@@ -1,14 +1,15 @@
 #include <iostream>
 #include <iomanip>
+#include <algorithm>
 using namespace std;
 
 void Input(float[], int&);
-void Enumerate(float[], int);
 void Output(float[], int);
+int Closest(float[], int, float&, float&);
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
+	cout << "Problem XXX - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
@@ -19,8 +20,10 @@ int main()
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
-	Enumerate(arr, n);
+	float x, y;
+	int checker = Closest(arr, n, x, y);
+	if (checker != -1)
+		cout << "Two closest elements in the inputted array are: {" << x << ", " << y << "}.";
 	delete[]arr;
 	cout << endl;
 	return 1;
@@ -47,11 +50,22 @@ void Output(float arr[], int n)
 	cout << endl;
 }
 
-void Enumerate(float arr[], int n)
+int Closest(float arr[], int n, float& x, float& y)
 {
-	if (n == 0)
-		return;
-	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+	if (n < 2)
+		return -1;
+	sort(arr, arr + n);
+	float Dmin = abs(arr[1] - arr[0]);
+	x = arr[0];
+	y = arr[1];
+	for (int i = 0; i < n - 1; i++)
+	{
+		if (abs(arr[i + 1] - arr[i]) < Dmin)
+		{
+			Dmin = abs(arr[i + 1] - arr[i]);
+			x = arr[i];
+			y = arr[i + 1];
+		}
+	}
+	return 0;
 }

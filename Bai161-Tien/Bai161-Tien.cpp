@@ -3,13 +3,14 @@
 using namespace std;
 
 void Input(float[], int&);
-void Enumerate(float[], int);
 void Output(float[], int);
+void DelPos(float[], int&, int);
+
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
-	int n = 0;
+	cout << "Problem 161 - To Vinh Tien - 22521474" << endl;
+	int n = 0, pos;
 	while (n <= 0)
 	{
 		cout << "\nEnter n:		";
@@ -19,8 +20,11 @@ int main()
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
-	Enumerate(arr, n);
+	cout << "\nEnter the position which you wanted to remove from the inputted array:		";
+	cin >> pos;
+	DelPos(arr, n, pos);
+	cout << "\nEdited array is:" << endl;
+	Output(arr, n);
 	delete[]arr;
 	cout << endl;
 	return 1;
@@ -47,11 +51,13 @@ void Output(float arr[], int n)
 	cout << endl;
 }
 
-void Enumerate(float arr[], int n)
+void DelPos(float arr[], int& n, int pos)
 {
-	if (n == 0)
+	if (pos == (n - 1))
+	{
+		n--;
 		return;
-	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+	}
+	arr[pos] = arr[pos + 1];
+	DelPos(arr, n, pos + 1);
 }

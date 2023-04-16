@@ -8,7 +8,7 @@ void Output(float[], int);
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
+	cout << "Problem 077 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
@@ -19,7 +19,7 @@ int main()
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
+	cout << "\nLocation of all the negative elements in the inputted array:" << endl;
 	Enumerate(arr, n);
 	delete[]arr;
 	cout << endl;
@@ -52,6 +52,6 @@ void Enumerate(float arr[], int n)
 	if (n == 0)
 		return;
 	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+	if (arr[n - 1] < 0)
+		cout << setw(10) << n - 1;
 }

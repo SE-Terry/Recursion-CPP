@@ -1,32 +1,34 @@
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
-void Input(float[], int&);
-void Enumerate(float[], int);
-void Output(float[], int);
+void Input(int[], int&);
+bool ChkSqrNum(int);
+int SumSqrNum(int[], int);
+void Output(int[], int);
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
+	cout << "Problem 089 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
 		cout << "\nEnter n:		";
 		cin >> n;
 	}
-	float* arr = new float[n];
+	int* arr = new int[n];
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
-	Enumerate(arr, n);
+	int s = SumSqrNum(arr, n);
+	cout << "\nThe sum of all square numbers in the input array is: " << s << ".";
 	delete[]arr;
 	cout << endl;
 	return 1;
 }
 
-void Input(float arr[], int& n)
+void Input(int arr[], int& n)
 {
 	cout << "\nYour inputted array will have " << n << " elements." << endl;
 	for (int i = 0; i < n; i++)
@@ -36,7 +38,7 @@ void Input(float arr[], int& n)
 	}
 }
 
-void Output(float arr[], int n)
+void Output(int arr[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -47,11 +49,18 @@ void Output(float arr[], int n)
 	cout << endl;
 }
 
-void Enumerate(float arr[], int n)
+bool ChkSqrNum(int n)
+{
+	int root = sqrt(n);
+	return root * root == n;
+}
+
+int SumSqrNum(int arr[], int n)
 {
 	if (n == 0)
-		return;
-	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+		return 0;
+	int s = SumSqrNum(arr, n - 1);
+	if (ChkSqrNum(arr[n - 1]) == true)
+		s += arr[n - 1];	
+	return s;
 }

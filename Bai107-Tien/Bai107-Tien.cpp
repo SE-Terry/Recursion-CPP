@@ -3,24 +3,27 @@
 using namespace std;
 
 void Input(float[], int&);
-void Enumerate(float[], int);
 void Output(float[], int);
+int PosFind(float[], int, float);
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
+	cout << "Problem 107 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
+	float x;
 	while (n <= 0)
 	{
 		cout << "\nEnter n:		";
 		cin >> n;
 	}
+	cout << "\nEnter x:		";
+	cin >> x;
 	float* arr = new float[n];
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
-	Enumerate(arr, n);
+	int position = PosFind(arr, n, x);
+	cout << "The position which element in the inputted array have the value equal to " << x << " is: " << position << "." << endl;
 	delete[]arr;
 	cout << endl;
 	return 1;
@@ -47,11 +50,12 @@ void Output(float arr[], int n)
 	cout << endl;
 }
 
-void Enumerate(float arr[], int n)
+int PosFind(float arr[], int n, float x)
 {
-	if (n == 0)
-		return;
-	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+	if (n == 1)
+		return 0;
+	int decoy = PosFind(arr, n - 1, x);
+	if (abs(arr[n - 1] - x) < abs(arr[decoy] - x))
+		decoy = n - 1;
+	return decoy;
 }

@@ -4,11 +4,12 @@ using namespace std;
 
 void Input(float[], int&);
 void Enumerate(float[], int);
+float Min(float[], int);
 void Output(float[], int);
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
+	cout << "Problem 083 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
@@ -19,7 +20,7 @@ int main()
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
+	cout << "\nLocation of all the minimum elements in the inputted array:" << endl;
 	Enumerate(arr, n);
 	delete[]arr;
 	cout << endl;
@@ -47,11 +48,26 @@ void Output(float arr[], int n)
 	cout << endl;
 }
 
+float Min(float arr[], int n)
+{
+	float minVal = arr[0];
+	for (int i = 1; i < n; i++)
+		if (arr[i] < minVal)
+			minVal = arr[i];
+	return minVal;
+}
+
 void Enumerate(float arr[], int n)
 {
 	if (n == 0)
 		return;
+	float decoy = Min(arr, n - 1);
+	if (decoy > arr[n - 1])
+	{
+		cout << setw(10) << n - 1;
+		return;
+	}
+	if (decoy == arr[n - 1])
+		cout << setw(10) << n - 1;
 	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
 }

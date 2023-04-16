@@ -2,31 +2,34 @@
 #include <iomanip>
 using namespace std;
 
-void Input(float[], int&);
-void Enumerate(float[], int);
-void Output(float[], int);
+void Input(int[], int&);
+void Output(int[], int);
+int FirstEvenEle(int[], int);
 
 int main()
 {
-	cout << "Problem 071 - To Vinh Tien - 22521474" << endl;
+	cout << "Problem 113 - To Vinh Tien - 22521474" << endl;
 	int n = 0;
 	while (n <= 0)
 	{
 		cout << "\nEnter n:		";
 		cin >> n;
 	}
-	float* arr = new float[n];
+	int* arr = new int[n];
 	Input(arr, n);
 	cout << "\nYour inputted array is:" << endl;
 	Output(arr, n);
-	cout << "\nAll the negative elements in the inputted array:" << endl;
-	Enumerate(arr, n);
+	int fev = FirstEvenEle(arr, n);
+	if (fev == -1)
+		cout << "\nThe inputted array doesn't exist any even element.";
+	else
+		cout << "\nThe first even element in the inputted array is: " << fev << ".";
 	delete[]arr;
 	cout << endl;
 	return 1;
 }
 
-void Input(float arr[], int& n)
+void Input(int arr[], int& n)
 {
 	cout << "\nYour inputted array will have " << n << " elements." << endl;
 	for (int i = 0; i < n; i++)
@@ -36,7 +39,7 @@ void Input(float arr[], int& n)
 	}
 }
 
-void Output(float arr[], int n)
+void Output(int arr[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -47,11 +50,14 @@ void Output(float arr[], int n)
 	cout << endl;
 }
 
-void Enumerate(float arr[], int n)
+int FirstEvenEle(int arr[], int n)
 {
 	if (n == 0)
-		return;
-	Enumerate(arr, n - 1);
-	if (arr[n - 1] < 0)			
-		cout << setw(10) << setprecision(6) << arr[n - 1];
+		return -1;
+	int decoy = FirstEvenEle(arr, n - 1);
+	if (decoy != -1)
+		return decoy;
+	if (arr[n - 1] % 2 == 0)
+		return arr[n - 1];
+	return -1;
 }
