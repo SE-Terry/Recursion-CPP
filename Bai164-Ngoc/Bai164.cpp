@@ -29,7 +29,8 @@ void ThemBaoToan(float a[], int&n, float x)
 		return;
 	}
 	a[n] = a[n - 1];
-	ThemBaoToan(a, n-1, x);
+	n--;
+	ThemBaoToan(a, n, x);
 	n++;
 }
 void Nhap(float a[], int&n)
