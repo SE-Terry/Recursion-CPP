@@ -2,16 +2,22 @@
 #include<iomanip>
 using namespace std;
 void LietKe(int[], int);
+void Nhap(int[], int&);
 bool ChuSoDau(int);
 int main()
 {
 	int a[100];
 	cout << "Nhap n:";
 	int n;
-	cin >> n;
-	for (int i = 0; i < n; i++) cin >> a[i];
+	Nhap(a, n);
 	LietKe(a, n);
 	return 0;
+}
+void Nhap(int a[], int& n)
+{
+	cout << "Nhap n:";
+	cin >> n;
+	for (int i = 0; i < n; i++) cin >> a[i];
 }
 bool ChuSoDau(int n)
 {
