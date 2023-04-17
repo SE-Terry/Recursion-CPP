@@ -21,13 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-<<<<<<< HEAD:Bai160-Bao/Bai160-Bao.vcxproj
-    <ProjectGuid>{d4d73cdf-2876-4359-8ea9-756fa558d462}</ProjectGuid>
+    <ProjectGuid>{49de2d0f-5179-4abe-ad05-cf108dbab37c}</ProjectGuid>
     <RootNamespace>Bai160Bao</RootNamespace>
-=======
-    <ProjectGuid>{a38ad14f-1a88-40c3-bcbe-25eb7b09496c}</ProjectGuid>
-    <RootNamespace>Bai163Ngan</RootNamespace>
->>>>>>> de108e221f2fe3449d0490a2f2d64b19ad10aad9:Bai163-Ngan/Bai163-Ngan.vcxproj
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -132,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bai160.cpp" />
+    <ClCompile Include="Bai160-Bao.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

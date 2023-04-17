@@ -39,4 +39,3 @@ bool KtGiam(int a[], int n)
 		return 1;
 	return 0;
 }
-

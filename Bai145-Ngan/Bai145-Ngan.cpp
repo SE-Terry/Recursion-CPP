@@ -3,30 +3,23 @@
 
 using namespace std;
 
-void HoanThienGiam(int[], int);
-bool ktHoanThien(int);
+int ktToanChan(int[], int);
 void Nhap(int[], int&);
 void Xuat(int[], int);
 
-void HoanThienGiam(int a[], int n)
+int ktToanChan(int a[], int n)
 {
+	if (n == 0)
+		return 0;
 	if (n == 1)
-		return;
-	for (int i = 0; i <= n - 2; i++)
-		if (ktHoanThien(a[i]) && ktHoanThien(a[n - 1]) && a[i] < a[n - 1])
-			swap(a[i], a[n - 1]);
-	HoanThienGiam(a, n - 1);
-}
-
-bool ktHoanThien(int n)
-{
-	int s = 0;
-	for (int i = 1; i < n; i++)
-		if (n % i == 0)
-			s = s + i;
-	if (s == n)
-		return true;
-	return false;
+	{
+		if (a[n - 1] % 2 == 0)
+			return 1;
+		return 0;
+	}
+	if (a[n - 1] % 2 == 0 && ktToanChan(a, n - 1) == 1)
+		return 1;
+	return 0;
 }
 
 void Nhap(int a[], int& n)
@@ -53,7 +46,10 @@ int main()
 	int b[100];
 	int k;
 	Nhap(b, k);
-	HoanThienGiam(b, k);
-	Xuat(b, k);
+	int kq = ktToanChan(b, k);
+	if (kq == 0)
+		cout << "Mang khong toan chan ";
+	else
+		cout << "Mang toan chan";
 	return 1;
 }

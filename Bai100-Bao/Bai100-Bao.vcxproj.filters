@@ -14,12 +14,9 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-<<<<<<< HEAD:Bai100-Bao/Bai100-Bao.vcxproj.filters
   <ItemGroup>
-    <ClCompile Include="Bai100.cpp">
+    <ClCompile Include="Bai100-Bao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-=======
->>>>>>> de108e221f2fe3449d0490a2f2d64b19ad10aad9:Bai187-Ngan/Bai187-Ngan.vcxproj.filters
 </Project>
