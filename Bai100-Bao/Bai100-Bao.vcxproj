@@ -21,8 +21,13 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
+<<<<<<< HEAD:Bai100-Bao/Bai100-Bao.vcxproj
     <ProjectGuid>{5ecba8e4-4716-406a-a1ff-c82179a4d3cb}</ProjectGuid>
     <RootNamespace>Bai100Bao</RootNamespace>
+=======
+    <ProjectGuid>{3b59a1a5-df0e-43fa-bfe0-2f4fadba4283}</ProjectGuid>
+    <RootNamespace>Bai151Ngan</RootNamespace>
+>>>>>>> de108e221f2fe3449d0490a2f2d64b19ad10aad9:Bai151-Ngan/Bai151-Ngan.vcxproj
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
